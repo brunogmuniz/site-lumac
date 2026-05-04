@@ -1,0 +1,42 @@
+<nav
+  [ngClass]="scrolled() ? 'scrolled' : ''"
+  class="navbar"
+>
+  <div class="navbar__inner">
+
+    <a href="#inicio" class="navbar__logo">
+      <img
+        src="/logo_lumac.png"
+        alt="Logo LUMAC"
+        class="navbar__logo-image"
+      >
+    </a>
+
+    <ul class="navbar__links">
+      @for (link of navLinks; track link.href) {
+        <li>
+          <a [href]="link.href" class="navbar__link">{{ link.label }}</a>
+        </li>
+      }
+    </ul>
+
+    <button class="navbar__hamburger" (click)="toggleMenu()" aria-label="Menu">
+      <span [ngClass]="menuOpen() ? 'open' : ''"></span>
+      <span [ngClass]="menuOpen() ? 'open' : ''"></span>
+      <span [ngClass]="menuOpen() ? 'open' : ''"></span>
+    </button>
+  </div>
+
+  @if (menuOpen()) {
+    <div class="navbar__mobile-menu">
+      @for (link of navLinks; track link.href) {
+        <a [href]="link.href" class="navbar__mobile-link" (click)="toggleMenu()">
+          {{ link.label }}
+        </a>
+      }
+      <a href="#contato" class="navbar__cta navbar__cta--mobile" (click)="toggleMenu()">
+        CONTATO
+      </a>
+    </div>
+  }
+</nav>
