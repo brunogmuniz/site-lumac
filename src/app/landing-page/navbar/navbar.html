@@ -15,28 +15,59 @@
     <ul class="navbar__links">
       @for (link of navLinks; track link.href) {
         <li>
-          <a [href]="link.href" class="navbar__link">{{ link.label }}</a>
+          <a [href]="link.href" class="navbar__link">
+            {{ link.label }}
+          </a>
         </li>
       }
     </ul>
+
+    <div class="navbar__settings">
+      <button
+        class="navbar__settings-btn"
+        (click)="toggleLanguageMenu()">
+        <ng-icon name="lucideSettings"></ng-icon>
+      </button>
+
+      @if(showLanguageMenu){
+        <div class="navbar__dropdown">
+
+          <button class="navbar__dropdown-item" (click)="changeLang('pt')">
+            🇧🇷 Português
+          </button>
+
+          <button class="navbar__dropdown-item" (click)="changeLang('en')">
+            🇺🇸 English
+          </button>
+
+          <button class="navbar__dropdown-item" (click)="changeLang('es')">
+            🇪🇸 Español
+          </button>
+
+        </div>
+      }
+    </div>
 
     <button class="navbar__hamburger" (click)="toggleMenu()" aria-label="Menu">
       <span [ngClass]="menuOpen() ? 'open' : ''"></span>
       <span [ngClass]="menuOpen() ? 'open' : ''"></span>
       <span [ngClass]="menuOpen() ? 'open' : ''"></span>
     </button>
+
   </div>
 
   @if (menuOpen()) {
     <div class="navbar__mobile-menu">
       @for (link of navLinks; track link.href) {
-        <a [href]="link.href" class="navbar__mobile-link" (click)="toggleMenu()">
+        <a
+          [href]="link.href"
+          class="navbar__mobile-link"
+          (click)="toggleMenu()"
+        >
           {{ link.label }}
         </a>
       }
-      <a href="#contato" class="navbar__cta navbar__cta--mobile" (click)="toggleMenu()">
-        CONTATO
-      </a>
     </div>
   }
+
 </nav>

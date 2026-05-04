@@ -1,0 +1,9 @@
+{
+  "navbar": {
+    "INICIO": "HOME",
+    "NOTICIAS": "NEWS",
+    "EQUIPE": "TEAM",
+    "INTERESSES": "INTERESTS",
+    "PROJETOS": "PROJECTS"
+  }
+}

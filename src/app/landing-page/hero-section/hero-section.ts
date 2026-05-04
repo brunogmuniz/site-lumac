@@ -1,13 +1,22 @@
-import {Component, OnInit, OnDestroy, AfterViewInit, ViewChild, ElementRef} from '@angular/core';
+import { Component, OnDestroy, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import Typed from 'typed.js';
+
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { lucideMapPin } from '@ng-icons/lucide';
 
 @Component({
   selector: 'app-hero-section',
-  imports: [],
+  imports: [NgIcon],
+  providers: [
+    provideIcons({
+      lucideMapPin
+    })
+  ],
   templateUrl: './hero-section.html',
   styleUrl: './hero-section.scss',
 })
 export class HeroSection implements AfterViewInit, OnDestroy {
+
   @ViewChild('typedElement')
   typedElement!: ElementRef;
 
@@ -26,16 +35,12 @@ export class HeroSection implements AfterViewInit, OnDestroy {
         typeSpeed: 90,
         backSpeed: 40,
         backDelay: 1500,
-        loop: true,
-        showCursor: true,
-        cursorChar: '|'
+        loop: true
       }
     );
   }
 
   ngOnDestroy(): void {
-    if (this.typed) {
-      this.typed.destroy();
-    }
+    this.typed?.destroy();
   }
 }
