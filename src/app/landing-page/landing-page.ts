@@ -5,6 +5,7 @@ import { Noticias } from './noticias/noticias';
 import Lenis from "lenis";
 import {Areas} from './areas/areas';
 import {Projetos} from './projetos/projetos';
+import {Equipe} from './equipe/equipe';
 
 @Component({
   selector: 'app-landing-page',
@@ -14,7 +15,8 @@ import {Projetos} from './projetos/projetos';
     HeroSection,
     Noticias,
     Areas,
-    Projetos
+    Projetos,
+    Equipe
   ],
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.scss',
