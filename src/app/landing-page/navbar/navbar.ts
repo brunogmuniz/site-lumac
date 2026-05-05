@@ -27,15 +27,16 @@ export class Navbar {
   menuOpen = signal(false);
 
   showLanguageMenu = false;
-  
+
   currentLang: Lang = 'pt';
 
   navLinks = [
     { label: 'INÍCIO', href: '#inicio' },
-    { label: 'NOTÍCIAS', href: '#noticias' },
-    { label: 'EQUIPE', href: '#equipe' },
     { label: 'INTERESSES', href: '#interesses' },
+    { label: 'NOTÍCIAS', href: '#noticias' },
     { label: 'PROJETOS', href: '#projetos' },
+    { label: 'EQUIPE', href: '#equipe' },
+    { label: 'TECNOLOGIAS', href: '#tecnologias' },
   ];
 
   @HostListener('window:scroll')

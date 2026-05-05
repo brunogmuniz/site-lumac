@@ -1,0 +1,8 @@
+// Apenas o que o Tailwind não cobre nativamente
+
+:host {
+  display: block;
+}
+
+// Dot ativo precisa de width dinâmico — Tailwind não faz [class] binding bem
+// Alternativa: use ngClass no template. Arquivo SCSS mantido mínimo.

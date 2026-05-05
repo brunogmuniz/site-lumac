@@ -4,6 +4,7 @@ import { HeroSection } from './hero-section/hero-section';
 import { Noticias } from './noticias/noticias';
 import Lenis from "lenis";
 import {Areas} from './areas/areas';
+import {Projetos} from './projetos/projetos';
 
 @Component({
   selector: 'app-landing-page',
@@ -12,7 +13,8 @@ import {Areas} from './areas/areas';
     Navbar,
     HeroSection,
     Noticias,
-    Areas
+    Areas,
+    Projetos
   ],
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.scss',

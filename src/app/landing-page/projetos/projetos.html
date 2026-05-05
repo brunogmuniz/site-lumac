@@ -1,0 +1,157 @@
+<section class="bg-[#fdfdfd] py-24 px-6 min-h-screen flex flex-col items-center">
+
+  <div class="text-center mb-16">
+    <p class="text-sm tracking-widest text-gray-500 uppercase" data-aos="fade-up">
+      Nossos
+    </p>
+    <h2 class="text-4xl md:text-5xl font-semibold mt-2" data-aos="fade-up">
+      Projetos
+    </h2>
+  </div>
+
+  <div
+    class="w-full max-w-7xl
+           bg-white
+           rounded-[32px]
+           border border-gray-100
+           shadow-[0_15px_50px_rgba(0,0,0,0.06)]
+           overflow-hidden
+           grid grid-cols-1 lg:grid-cols-2"
+  >
+
+    <div class="p-8 md:p-14 flex flex-col justify-between">
+      <div>
+        <h3 class="text-3xl md:text-4xl font-semibold tracking-tighttext-gray-900mb-5">
+          {{ currentProject.name }}
+        </h3>
+        <p
+          class="text-gray-500 text-base leading-8max-w-xl">
+          {{ currentProject.description }}
+        </p>
+      </div>
+      <div class="mt-12">
+        <a
+          [href]="currentProject.url"
+          target="_blank"
+          class="inline-flex items-center justify-center
+                 bg-orange-500 hover:bg-orange-600
+                 text-white
+                 font-semibold text-sm
+                 px-8 py-4
+                 rounded-full
+                 shadow-lg shadow-orange-500/20
+                 transition-all duration-300
+                 hover:-translate-y-1"
+        >
+          Ver projeto
+        </a>
+        <div class="mt-10 flex items-end gap-2">
+          <span
+            class="text-5xl font-black text-gray-900"
+          >
+            {{ (currentIndex + 1).toString().padStart(2, '0') }}
+          </span>
+          <span
+            class="text-lg text-gray-400 mb-1"
+          >
+            / {{ projects.length.toString().padStart(2, '0') }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative
+         bg-gradient-to-br
+         from-blue-50
+         via-indigo-50
+         to-white
+         flex items-center justify-center
+         p-4 md:p-8
+         overflow-hidden"
+    >
+
+      <div class="relative z-10 w-full max-w-none px-4">
+
+        <img
+          *ngIf="currentProject.mockup"
+          [src]="currentProject.mockup"
+          [alt]="currentProject.name"
+          class="w-[115%] max-w-none h-auto
+           object-contain
+           drop-shadow-2xl
+           -ml-6
+           scale-110"
+          (error)="onImgError()"
+        />
+
+        <div
+          *ngIf="!currentProject.mockup"
+          class="aspect-video rounded-3xl
+           bg-gradient-to-br
+           from-[#2072C2]
+           to-blue-600
+           flex items-center justify-center
+           text-white font-semibold"
+        >
+          {{ currentProject.name }}
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <!-- navegação -->
+  <div class="w-full max-w-7xl mt-10 flex items-center gap-5">
+
+    <!-- prev -->
+    <button
+      (click)="prev()"
+      class="w-12 h-12
+             rounded-full
+             bg-white
+             border border-gray-200
+             text-gray-600
+             flex items-center justify-center
+             transition-all duration-300
+             hover:border-[#2072C2]
+             hover:text-[#2072C2]"
+    >
+      ←
+    </button>
+
+    <!-- bullets -->
+    <div class="flex items-center gap-3">
+
+      <button
+        *ngFor="let p of projects; let i = index"
+        (click)="goTo(i)"
+        class="h-2 rounded-full transition-all duration-300"
+        [class]="
+          i === currentIndex
+            ? 'w-8 bg-[#2072C2]'
+            : 'w-2 bg-gray-300 hover:bg-gray-400'
+        "
+      ></button>
+
+    </div>
+
+    <!-- next -->
+    <button
+      (click)="next()"
+      class="w-12 h-12
+             rounded-full
+             bg-[#2072C2]
+             text-white
+             flex items-center justify-center
+             transition-all duration-300
+             hover:-translate-y-1"
+    >
+      →
+    </button>
+
+  </div>
+
+</section>

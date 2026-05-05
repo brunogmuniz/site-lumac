@@ -12,20 +12,20 @@ export class Noticias {
 
   ultimasNoticias = [
     {
-      titulo: 'UFSM anuncia novo edital',
-      descricao: 'Novo edital de bolsas foi publicado hoje para alunos de graduação.',
+      titulo: 'Lorem ipsum dolor sit amet.',
+      descricao: 'Lorem ipsum dolor sit amet.',
       imagem: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644',
       data: '04/05/2026'
     },
     {
-      titulo: 'Evento de tecnologia em Soledade',
-      descricao: 'Hackathon reúne estudantes e startups da região.',
+      titulo: 'Lorem ipsum dolor sit amet.',
+      descricao: 'Lorem ipsum dolor sit amet.',
       imagem: 'https://images.unsplash.com/photo-1556761175-4b46a572b786',
       data: '03/05/2026'
     },
     {
-      titulo: 'Sistema acadêmico atualizado',
-      descricao: 'Nova versão traz melhorias de desempenho e usabilidade.',
+      titulo: 'Lorem ipsum dolor sit amet.',
+      descricao: 'Lorem ipsum dolor sit amet.',
       imagem: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c',
       data: '02/05/2026'
     }
