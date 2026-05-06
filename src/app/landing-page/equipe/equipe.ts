@@ -19,21 +19,39 @@ export class Equipe {
   membros: MembroEquipe[] = [
     {
       nome: 'Dr. Vínicius Maran',
-      cargo: 'PROFESSOR E COORDENADOR',
+      cargo: 'Professor e Coordenador',
       foto: 'equipe/vinicius-maran.png',
       descricao: 'Doutorado em Ciência da Computação, Computação Ubíqua, Devops, Computação Móvel.'
     },
     {
-      nome: 'Alencar Machado',
-      cargo: 'PROFESSOR E COORDENADOR',
+      nome: 'Dr. Alencar Machado',
+      cargo: 'Professor e Coordenador',
       foto: 'equipe/alencar-machado.jpg',
       descricao: 'Doutorado em Ciência da Computação, Computação Ubíqua, Computação Pervasiva, Computação orientada a Objetos.'
     },
     {
       nome: 'Glênio Descovi',
-      cargo: 'PROFESSOR',
+      cargo: 'Coordenador',
       foto: 'equipe/glenio.png',
-      descricao: 'Mestrando em Ciência da Computação, Computação Ubíqua, Squad-Leader '
+      descricao: 'Doutorando em Ciência da Computação, Computação Ubíqua, Squad-Leader '
+    },
+    {
+      nome: 'Matheus Friedhein Flores',
+      cargo: 'Coordenador',
+      foto: 'equipe/matheus.png',
+      descricao: 'Mestre em Ciência da Computação, Arquiteto de Software, Squad Leader, Inteligência Artificial.'
+    },
+    {
+      nome: 'Anderson Dotto Padoin',
+      cargo: 'Técnico Admnistrativo',
+      foto: 'equipe/anderson.jpg',
+      descricao: 'Graduado em Sistemas para Internet, Angular'
+    },
+    {
+      nome: 'Diones Vargas Dutra',
+      cargo: 'Técnico Admnistrativo',
+      foto: 'equipe/diones.jpg',
+      descricao: 'Computação Ubíqua, Computação Pervasiva, Devops, Sistemas Inteligentes.'
     },
     {
       nome: 'Jonas Bulegon Gassen',
@@ -41,47 +59,25 @@ export class Equipe {
       foto: 'equipe/jonas.png',
       descricao: 'Doutorado em Ciência da Computação, Computação Móvel, Computação Pervasiva'
     },
-    {
-      nome: 'Anderson Dotto Padoin',
-      cargo: 'TECNICO ADMINISTRATIVO',
-      foto: 'equipe/anderson.jpg',
-      descricao: 'Graduado em Sistemas para Internet, Angular'
-    },
-    {
-      nome: 'Diones Vargas Dutra',
-      cargo: 'TECNICO ADMINISTRATIVO',
-      foto: 'equipe/diones.jpg',
-      descricao: 'Computação Ubíqua, Computação Pervasiva, Devops, Sistemas Inteligentes.'
-    },
-    {
-      nome: 'Matheus Friedhein Flores',
-      cargo: 'Discente',
-      foto: 'equipe/matheus.png',
-      descricao: 'Mestre em Ciência da Computação, Arquiteto de Software, Squad Leader.'
-    },
-    {
-      nome: 'Pedro Bilar Montero',
-      cargo: 'Discente',
-      foto: 'equipe/pedro-bilar.jpg',
-      descricao: 'Mestrando em Ciência da Computação, Professor, Squad Leader.'
-    },
-    {
-      nome: 'Gabriel Rodrigues da Silva',
-      cargo: 'Discente',
-      foto: 'equipe/gabriel.jpg',
-      descricao: 'Mestrando em Ciência da Computação, Computação Pervasiva, Computação Ubíqua.'
-    },
+
+    // MESTRANDOS
     {
       nome: 'Felipe Amadori Machado',
       cargo: 'Discente',
       foto: 'equipe/felipe.jpg',
-      descricao: 'Mestrando em Ciência da Computação, Computação Pervasiva, Computação Ubíqua.'
+      descricao: 'Mestrando em Ciência da Computação, Computação Pervasiva, Computação Ubíqua, Inteligência Artificial.'
     },
     {
-      nome: 'Thales Augusto Lagemann',
+      nome: 'Fernando Soso',
       cargo: 'Discente',
-      foto: 'equipe/thales.jpg',
-      descricao: 'Mestrando em Ciência da Computação, Computação Movél, Computação Ubíqua.'
+      foto: 'equipe/fernando.jpg',
+      descricao: 'Mestrando em Ciência da Computação, Interfaces do Usuario, Designer de Produto.'
+    },
+    {
+      nome: 'Francesco Krum',
+      cargo: 'Discente',
+      foto: 'equipe/francesco.png',
+      descricao: 'Mestrando em Ciência da Computação, Blockchain, Microsserviços, Arquiteturas Semânticas.'
     },
     {
       nome: 'Gabriel Casanova',
@@ -90,16 +86,22 @@ export class Equipe {
       descricao: 'Mestrando em Ciência da Computação, Inteligência Artificial, Computação Ubíqua.'
     },
     {
-      nome: 'Lucas da Silva Lins Baía',
+      nome: 'Gabriel Fuentes',
       cargo: 'Discente',
-      foto: 'equipe/lucas.png',
-      descricao: 'Técnico em Informatica, Designer de Interfaces, Product Designer.'
+      foto: 'equipe/fuentes.jpg',
+      descricao: 'Mestrando em Ciência da Computação, Inteligência Artificial, Microsserviços.'
     },
     {
-      nome: 'Mauro Schmidt Moro',
+      nome: 'Gabriel Rodrigues da Silva',
       cargo: 'Discente',
-      foto: 'equipe/mauro.jpg',
-      descricao: 'Graduando em Sistemas Para Internet'
+      foto: 'equipe/gabriel.jpg',
+      descricao: 'Mestrando em Ciência da Computação, Computação Pervasiva, Computação Ubíqua, Inteligência Artificial.'
+    },
+    {
+      nome: 'Leonardo Petta do Nascimento',
+      cargo: 'Discente',
+      foto: 'equipe/leonardo.jpg',
+      descricao: 'Mestrando em Ciência da Computação, Computação Ubíqua, Inteligência Artificial.'
     },
     {
       nome: 'Marco Antonio Moro Belous',
@@ -107,23 +109,50 @@ export class Equipe {
       foto: 'equipe/marco.jpg',
       descricao: 'Mestrando em Ciência da Computação, Modelos de Recomendação, Inteligência Artificial.'
     },
+
     {
-      nome: 'Fernando Soso',
+      nome: 'Pedro Bilar Montero',
       cargo: 'Discente',
-      foto: 'equipe/fernando.jpg',
-      descricao: 'Mestrando em Ciência da Computação, Interfaces do Usuario, Designer de Prdouto.'
+      foto: 'equipe/pedro-bilar.jpg',
+      descricao: 'Mestrando em Ciência da Computação, Professor, Squad Leader, Inteligência Artificial.'
     },
     {
-      nome: 'Francesco Krum',
+      nome: 'Rodrigo Seliprin',
       cargo: 'Discente',
-      foto: 'equipe/francesco.png',
-      descricao: 'Mestrando em Ciência da Computação, CI/CD, Microsserviços.'
+      foto: 'equipe/rodrigo.jpeg',
+      descricao: 'Mestrando em Ciência da Computação, Computação Ubíqua, Inteligência Artificial.'
     },
     {
-      nome: 'Thiago Paulo Both',
+      nome: 'Thales Augusto Lagemann',
       cargo: 'Discente',
-      foto: 'equipe/thiago.jpg',
-      descricao: 'Graduando em Sistemas Para Internet, Devops.'
+      foto: 'equipe/thales.jpg',
+      descricao: 'Mestrando em Ciência da Computação, Computação Movél, Computação Ubíqua.'
+    },
+
+
+    {
+      nome: 'Bruno Gonçalves Muniz',
+      cargo: 'Discente',
+      foto: 'equipe/muniz.jpeg',
+      descricao: 'Graduando em Sistemas Para Internet, Interfaces do Usuario, UI/UX.'
+    },
+    {
+      nome: 'João Victor Guedes',
+      cargo: 'Discente',
+      foto: 'equipe/gue10.jpg',
+      descricao: 'Graduando em Sitemas Para Internet, Desenvolvedor Fullstack, Microsserviços.'
+    },
+    {
+      nome: 'Joloano Korzekwa Pereira',
+      cargo: 'Discente',
+      foto: 'equipe/joloano.JPEG',
+      descricao: 'Graduando em Sistemas Para Internet.'
+    },
+    {
+      nome: 'Lucas da Silva Lins Baía',
+      cargo: 'Discente',
+      foto: 'equipe/lucas.png',
+      descricao: 'Técnico em Informatica, Designer de Interfaces, Product Designer.'
     },
     {
       nome: 'Luiza Crumenauer',
@@ -132,10 +161,10 @@ export class Equipe {
       descricao: 'Graduanda em Sistemas Para Internet, Interfaces do Usuario, UI/UX.'
     },
     {
-      nome: 'João Victor Guedes',
+      nome: 'Mauro Schmidt Moro',
       cargo: 'Discente',
-      foto: 'equipe/gue10.jpg',
-      descricao: 'Graduando em Sitemas Para Internet.'
+      foto: 'equipe/mauro.jpg',
+      descricao: 'Graduando em Sistemas Para Internet'
     },
     {
       nome: 'Murilo Wilke',
@@ -144,40 +173,11 @@ export class Equipe {
       descricao: 'Graduando em Sistemas Para Internet, Computação Móvel.'
     },
     {
-      nome: 'Gabriel Fuentes',
+      nome: 'Thiago Paulo Both',
       cargo: 'Discente',
-      foto: 'equipe/fuentes.jpg',
-      descricao: 'Mestrando em Ciência da Computação.'
+      foto: 'equipe/thiago.jpg',
+      descricao: 'Graduando em Sistemas Para Internet, Devops, CI/CD.'
     },
-    {
-      nome: 'Bruno Gonçalves Muniz',
-      cargo: 'Discente',
-      foto: 'equipe/muniz.jpeg',
-      descricao: 'Graduando em Sistemas Para Internet, Interfaces do Usuario, UI/UX.'
-    },
-    {
-      nome: 'Rodrigo Seliprin',
-      cargo: 'Discente',
-      foto: 'equipe/rodrigo.jpeg',
-      descricao: 'Mestrando em Ciência da Computação, Computação Ubíqua.'
-    },
-    {
-      nome: 'Leonardo Petta do Nascimento',
-      cargo: 'Discente',
-      foto: 'equipe/leonardo.jpg',
-      descricao: 'Mestrando em Ciência da Computação, Computação Ubíqua.'
-    },
-    {
-      nome: 'Joloano Korzekwa Pereira',
-      cargo: 'Discente',
-      foto: 'equipe/joloano.JPEG',
-      descricao: 'Graduando em Sistemas Para Internet.'
-    },
-
-
-
-
-
   ];
 
 }

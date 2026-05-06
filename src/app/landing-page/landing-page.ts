@@ -6,6 +6,7 @@ import Lenis from "lenis";
 import {Areas} from './areas/areas';
 import {Projetos} from './projetos/projetos';
 import {Equipe} from './equipe/equipe';
+import {Mapa} from './mapa/mapa';
 
 @Component({
   selector: 'app-landing-page',
@@ -16,7 +17,8 @@ import {Equipe} from './equipe/equipe';
     Noticias,
     Areas,
     Projetos,
-    Equipe
+    Equipe,
+    Mapa
   ],
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.scss',

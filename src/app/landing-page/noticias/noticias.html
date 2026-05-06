@@ -2,25 +2,18 @@
 
   <div class="relative max-w-6xl mx-auto">
 
-    <!-- título -->
     <div class="text-center mb-16">
-      <p class="text-sm tracking-widest text-gray-500 uppercase" data-aos="fade-up">
-        Ultímas
-      </p>
+      <p class="text-sm tracking-[0.25em] text-[#2072C2] uppercase font-medium" data-aos="fade-up">ULTÌMAS</p>
       <h2 class="text-4xl md:text-5xl font-semibold mt-2" data-aos="fade-up">
         Noticias
       </h2>
     </div>
 
-    <!-- grid -->
     <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3" data-aos="fade-up">
-
       <div
         *ngFor="let noticia of ultimasNoticias"
-        class="group relative bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300"
-      >
+        class="group relative bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300">
 
-        <!-- imagem -->
         <div class="overflow-hidden">
           <img
             [src]="noticia.imagem"
@@ -45,13 +38,8 @@
           <button class="mt-5 text-sm text-blue-600 hover:text-blue-700 transition inline-flex items-center gap-1">
             Ler mais <span class="group-hover:translate-x-1 transition">→</span>
           </button>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
