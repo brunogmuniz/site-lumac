@@ -149,6 +149,12 @@ export class Equipe {
       descricao: 'Graduando em Sistemas Para Internet.'
     },
     {
+      nome: 'Lorena Finamor Carvalo',
+      cargo: 'Discente',
+      foto: 'equipe/lorena.jpeg',
+      descricao: 'Graduanda em Sistemas Para Internet.'
+    },
+    {
       nome: 'Lucas da Silva Lins Baía',
       cargo: 'Discente',
       foto: 'equipe/lucas.png',
@@ -177,6 +183,12 @@ export class Equipe {
       cargo: 'Discente',
       foto: 'equipe/thiago.jpg',
       descricao: 'Graduando em Sistemas Para Internet, Devops, CI/CD.'
+    },
+    {
+      nome: 'Vinicius Woltmann Abaddy',
+      cargo: 'Discente',
+      foto: 'equipe/vini-lumac.png',
+      descricao: 'Graduando em Sistemas Para Internet, Microsserviços e Computação Movél.'
     },
   ];
 
