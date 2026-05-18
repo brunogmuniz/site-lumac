@@ -1,0 +1,58 @@
+<section class="login">
+
+  <div class="login__inner">
+
+    <div class="login__visual">
+      <img src="/logo_hero.png" alt="Logo LUMAC" class="login__logo">
+    </div>
+
+    <div class="login__content">
+
+      <div class="login__heading-wrap">
+        <h1 class="login__heading">
+          Bem-vindo<br>
+          <span class="login__highlight">de volta.</span>
+        </h1>
+        <p class="login__sub">
+          Acesse o painel do <strong>LUMAC</strong> com suas credenciais.
+        </p>
+      </div>
+
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="login__form" novalidate>
+
+        <div class="login__field">
+          <label for="usuario" class="login__label">Usuário</label>
+          <input
+            id="usuario"
+            type="text"
+            name="usuario"
+            [(ngModel)]="usuario"
+            required
+            placeholder="seu usuário"
+            class="login__input"
+          />
+        </div>
+
+        <div class="login__field">
+          <label for="password" class="login__label">Senha</label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+            required
+            placeholder="••••••••"
+            class="login__input"
+          />
+        </div>
+
+        <button type="submit" [disabled]="loading" class="login__btn">
+          {{ loading ? 'Entrando...' : 'Entrar' }}
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+</section>

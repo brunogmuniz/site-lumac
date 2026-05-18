@@ -128,13 +128,30 @@ export class Equipe {
       foto: 'equipe/thales.jpg',
       descricao: 'Mestrando em Ciência da Computação, Computação Movél, Computação Ubíqua.'
     },
-
+    {
+      nome: 'Bruno Fetzer',
+      cargo: 'Discente',
+      foto: 'equipe/brunof.jpeg',
+      descricao: 'Graduando em Sistemas Para Internet, Interfaces do Usuario, UI/UX.'
+    },
 
     {
       nome: 'Bruno Gonçalves Muniz',
       cargo: 'Discente',
       foto: 'equipe/muniz.jpeg',
       descricao: 'Graduando em Sistemas Para Internet, Interfaces do Usuario, UI/UX.'
+    },
+    {
+      nome: 'Diogo Machado',
+      cargo: 'Discente',
+      foto: 'equipe/diogo.jpeg',
+      descricao: 'Graduando em Sistemas Para Internet, Programação Mobile, Sistemas de Informação.'
+    },
+    {
+      nome: 'Eduardo Schlersner',
+      cargo: 'Discente',
+      foto: 'equipe/eduardo.jpeg',
+      descricao: 'Graduando em Engenharia da Computação, Inteligencia Artificial.'
     },
     {
       nome: 'João Victor Guedes',
