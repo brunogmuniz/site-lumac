@@ -21,14 +21,14 @@
       <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="login__form" novalidate>
 
         <div class="login__field">
-          <label for="usuario" class="login__label">Usuário</label>
+          <label for="usuario" class="login__label">E-mail</label>
           <input
             id="usuario"
-            type="text"
+            type="email"
             name="usuario"
             [(ngModel)]="usuario"
             required
-            placeholder="seu usuário"
+            placeholder="seu@email.com"
             class="login__input"
           />
         </div>
@@ -45,6 +45,10 @@
             class="login__input"
           />
         </div>
+
+        @if (erro) {
+          <p class="login__erro">{{ erro }}</p>
+        }
 
         <button type="submit" [disabled]="loading" class="login__btn">
           {{ loading ? 'Entrando...' : 'Entrar' }}

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Noticia, NoticiaService } from '../../core/noticia.service';
 
 @Component({
   selector: 'app-noticias',
@@ -8,27 +9,22 @@ import { CommonModule } from '@angular/common';
   templateUrl: './noticias.html',
   styleUrl: './noticias.scss',
 })
-export class Noticias {
+export class Noticias implements OnInit {
 
-  ultimasNoticias = [
-    {
-      titulo: 'Lorem ipsum dolor sit amet.',
-      descricao: 'Lorem ipsum dolor sit amet.',
-      imagem: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644',
-      data: '04/05/2026'
-    },
-    {
-      titulo: 'Lorem ipsum dolor sit amet.',
-      descricao: 'Lorem ipsum dolor sit amet.',
-      imagem: 'https://images.unsplash.com/photo-1556761175-4b46a572b786',
-      data: '03/05/2026'
-    },
-    {
-      titulo: 'Lorem ipsum dolor sit amet.',
-      descricao: 'Lorem ipsum dolor sit amet.',
-      imagem: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c',
-      data: '02/05/2026'
-    }
-  ];
+  ultimasNoticias: Noticia[] = [];
+  carregando = true;
 
+  constructor(private noticiaService: NoticiaService) {}
+
+  ngOnInit(): void {
+    this.noticiaService.listarPublicadas().subscribe({
+      next: (data) => {
+        this.ultimasNoticias = data;
+        this.carregando = false;
+      },
+      error: () => {
+        this.carregando = false;
+      }
+    });
+  }
 }

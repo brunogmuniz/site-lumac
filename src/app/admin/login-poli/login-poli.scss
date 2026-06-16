@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap');
+
 :host {
   display: block;
 }
@@ -151,6 +153,18 @@
   }
 }
 
+// Erro de autenticação
+.login__erro {
+  margin: 0;
+  padding: .65rem 1rem;
+  border-radius: 8px;
+  background: rgba(239, 68, 68, .12);
+  border: 1px solid rgba(239, 68, 68, .3);
+  color: #fca5a5;
+  font-family: 'Inter', sans-serif;
+  font-size: .85rem;
+}
+
 .login__btn {
   margin-top: .5rem;
   padding: .95rem 1.6rem;
@@ -174,28 +188,6 @@
     cursor: not-allowed;
   }
 }
-
-// Scroll hint (igual à hero)
-.login__scroll-hint {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .4rem;
-  z-index: 10;
-
-  span {
-    color: rgba(255,255,255,.35);
-    font-family: 'Inter', sans-serif;
-    font-size: .6rem;
-    text-transform: uppercase;
-    letter-spacing: .2em;
-  }
-}
-
 
 ng-icon {
   color: white;

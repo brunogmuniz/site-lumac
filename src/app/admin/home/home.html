@@ -1,1 +1,138 @@
-<p>home works!</p>
+<div class="admin">
+
+  <!-- Header -->
+  <header class="admin__header">
+    <span class="admin__header-title">Painel LUMAC</span>
+    <div class="admin__header-right">
+      <span class="admin__header-user">{{ nomeUsuario }}</span>
+      <button class="admin__logout-btn" (click)="logout()">Sair</button>
+    </div>
+  </header>
+
+  <main class="admin__main">
+
+    <!-- Formulário de cadastro -->
+    <section class="admin__card">
+      <h2 class="admin__card-title">Nova Notícia</h2>
+
+      @if (erro) {
+        <p class="admin__msg admin__msg--erro">{{ erro }}</p>
+      }
+      @if (sucesso) {
+        <p class="admin__msg admin__msg--sucesso">{{ sucesso }}</p>
+      }
+
+      <div class="admin__form">
+
+        <div class="admin__field">
+          <label class="admin__label">Título *</label>
+          <input
+            type="text"
+            class="admin__input"
+            [(ngModel)]="form.titulo"
+            placeholder="Título da notícia"
+          />
+        </div>
+
+        <div class="admin__field">
+          <label class="admin__label">Resumo *</label>
+          <textarea
+            class="admin__input admin__textarea"
+            [(ngModel)]="form.resumo"
+            placeholder="Breve descrição da notícia"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <div class="admin__row">
+          <div class="admin__field">
+            <label class="admin__label">Data de publicação *</label>
+            <input
+              type="datetime-local"
+              class="admin__input"
+              [(ngModel)]="form.dataPublicacao"
+            />
+          </div>
+
+          <div class="admin__field">
+            <label class="admin__label">URL da imagem</label>
+            <input
+              type="url"
+              class="admin__input"
+              [(ngModel)]="form.imagemUrl"
+              placeholder="https://..."
+            />
+          </div>
+        </div>
+
+        <div class="admin__field">
+          <label class="admin__label">Link de redirecionamento</label>
+          <input
+            type="url"
+            class="admin__input"
+            [(ngModel)]="form.linkRedirecionamento"
+            placeholder="https://..."
+          />
+        </div>
+
+        <button class="admin__btn admin__btn--primary" (click)="cadastrar()" [disabled]="salvando">
+          {{ salvando ? 'Salvando...' : 'Cadastrar notícia' }}
+        </button>
+
+      </div>
+    </section>
+
+    <!-- Listagem -->
+    <section class="admin__card">
+      <div class="admin__card-header">
+        <h2 class="admin__card-title">Notícias cadastradas</h2>
+        <button class="admin__btn admin__btn--secondary" (click)="carregarNoticias()">
+          Atualizar
+        </button>
+      </div>
+
+      @if (carregando) {
+        <p class="admin__empty">Carregando...</p>
+      } @else if (noticias.length === 0) {
+        <p class="admin__empty">Nenhuma notícia cadastrada.</p>
+      } @else {
+        <div class="admin__table-wrap">
+          <table class="admin__table">
+            <thead>
+            <tr>
+              <th>Título</th>
+              <th>Data</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+              @for (n of noticias; track n.id) {
+                <tr>
+                  <td class="admin__td-titulo">{{ n.titulo }}</td>
+                  <td class="admin__td-data">{{ n.dataPublicacao | date:'dd/MM/yyyy HH:mm' }}</td>
+                  <td>
+                    <span class="admin__badge" [class.admin__badge--pub]="n.publicada">
+                      {{ n.publicada ? 'Publicada' : 'Rascunho' }}
+                    </span>
+                  </td>
+                  <td class="admin__td-acoes">
+                    @if (!n.publicada) {
+                      <button class="admin__btn admin__btn--sm admin__btn--pub" (click)="publicar(n.id)">
+                        Publicar
+                      </button>
+                    }
+                    <button class="admin__btn admin__btn--sm admin__btn--del" (click)="excluir(n.id)">
+                      Excluir
+                    </button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      }
+    </section>
+
+  </main>
+</div>
